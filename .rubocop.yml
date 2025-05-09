@@ -1,0 +1,27 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.3  # Updated to match your Ruby version from Gemfile
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+
+Layout/LineLength:
+  Max: 100  # Reasonable line length for readability
+
+Metrics/MethodLength:
+  Max: 15  # Prevent overly long methods
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"  # Allow longer blocks in test files
+
+Style/FrozenStringLiteralComment:
+  Enabled: false  # Optional: Turn off magic comment enforcement
+
+Naming/PredicateName:
+  Enabled: false  # Optional: Avoid `has_`/`is_` naming errors
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes  # Enforce double quotes instead of single quotes
